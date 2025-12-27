@@ -1,5 +1,11 @@
 <?php
 
+// DB credentials (XAMPP defaults). Not mandatory to mention.
+$servername = "localhost";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "mysql";
+
 // connect to MySQL
 $conn = new mysqli("localhost", "root", "", "mysql");
 
