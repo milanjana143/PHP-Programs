@@ -14,8 +14,14 @@ if (!$conn) {
   die("Connection failed: ");
 }
 
+// create db if not exist
+$conn->query("CREATE DATABASE IF NOT EXISTS student");
+
+// select the created db to create a table in it
+$conn->select_db("student");
+
 // create table if not exists
-$conn->query("CREATE TABLE IF NOT EXISTS demo_users (
+$conn->query("CREATE TABLE IF NOT EXISTS college (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(50),
   email VARCHAR(50))");
@@ -24,11 +30,11 @@ $conn->query("CREATE TABLE IF NOT EXISTS demo_users (
 if (isset($_POST['save'])) {
   $name = htmlspecialchars($_POST['name']);
   $email = htmlspecialchars($_POST['email']);
-  $conn->query("INSERT INTO demo_users (name, email) VALUES ('$name', '$email')");
+  $conn->query("INSERT INTO college (name, email) VALUES ('$name', '$email')");
 }
 
 // fetch data
-$result = $conn->query("SELECT * FROM demo_users");
+$result = $conn->query("SELECT * FROM college");
 ?>
 
 <!DOCTYPE html>
@@ -52,4 +58,3 @@ while($row = $result->fetch_assoc()) {
 
 </body>
 </html>
-
