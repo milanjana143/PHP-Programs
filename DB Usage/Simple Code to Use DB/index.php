@@ -1,6 +1,6 @@
 <?php
 
-// DB credentials (XAMPP defaults). Not mandatory to mention.
+// DB credentials (XAMPP defaults). Not mandatory to mention these 4 lines.
 $servername = "localhost";
 $dbusername = "root";
 $dbpassword = "";
