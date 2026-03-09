@@ -1,4 +1,4 @@
-## 🐘 Introduction to PHP
+## Introduction to PHP
 
 **PHP (Hypertext Preprocessor) is a server-side scripting language** used for developing dynamic and interactive websites. It is widely used for web development and works well with databases like MySQL.
 
